@@ -12,7 +12,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return response()->json(Order::all());
+        return Order::orderBy('created_at', 'desc')->get();
     }
 
     /**
